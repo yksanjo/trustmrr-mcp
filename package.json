@@ -17,7 +17,8 @@
     "start": "node dist/stdio.js",
     "start:http": "node dist/http.js",
     "warm-index": "node dist/warm-index.js",
-    "test": "npm run build && node test/run.mjs"
+    "test": "npm run build && node test/run.mjs",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "mcp",
