@@ -1,0 +1,40 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.yksanjo/trustmrr-mcp",
+  "title": "TrustMRR Revenue",
+  "description": "Look up verified revenue (MRR, 30-day, all-time) of any website listed on TrustMRR.",
+  "repository": {
+    "url": "https://github.com/yksanjo/trustmrr-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "trustmrr-revenue-mcp",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        {
+          "name": "TRUSTMRR_API_KEY",
+          "description": "TrustMRR API key (get one at https://trustmrr.com/dashboard-dev)",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "TRUSTMRR_INDEX_PATH",
+          "description": "Path of the domain index cache (default ~/.cache/trustmrr-mcp/domain-index.json)",
+          "isRequired": false,
+          "format": "string"
+        },
+        {
+          "name": "TRUSTMRR_RPM",
+          "description": "Max API requests per minute (default 18)",
+          "isRequired": false,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}
